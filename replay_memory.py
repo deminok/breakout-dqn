@@ -6,7 +6,6 @@ from config import *
 Experience = namedtuple('Experience',
                         ('state', 'action', 'reward', 'state_'))
 
-
 class ReplayMemory(object):
 
     def __init__(self):
