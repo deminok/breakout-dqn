@@ -1,9 +1,8 @@
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 class DQN(nn.Module):
-    def __init__(self, action_size):
+    def __init__(self):
         super(DQN, self).__init__()
         self.conv1 = nn.Conv2d(4, 32, kernel_size=8, stride=4)
         self.bn1 = nn.BatchNorm2d(32)
@@ -12,7 +11,7 @@ class DQN(nn.Module):
         self.conv3 = nn.Conv2d(64, 64, kernel_size=3, stride=1)
         self.bn3 = nn.BatchNorm2d(64)
         self.fc = nn.Linear(3136, 512)
-        self.head = nn.Linear(512, action_size)
+        self.head = nn.Linear(512, 4)
 
     def forward(self, x):
         x = F.relu(self.bn1(self.conv1(x)))
