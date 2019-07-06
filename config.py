@@ -20,7 +20,6 @@ MIN_SQ_GRAD = 0.01
 
 """User Parameters"""
 RENDER = False #watch the agent learn
-RECORD = False #record sessions to ./videos/
 EVAL = True #store evaluation graphs in ./eval/
 EVAL_PERIOD = 10
 LOGGING = False #log information about current training values to console
