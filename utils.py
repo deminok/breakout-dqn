@@ -33,7 +33,7 @@ def plot_states(state):
     w = 160
     h = 210
     fig = plt.figure(figsize=(10, 4))
-    columns = 4
+    columns = 5
     rows = 1
     for i in range(1, columns * rows + 1):
         img = state[0, i - 1, :, :]
