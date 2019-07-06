@@ -2,6 +2,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class DQN(nn.Module):
+
     def __init__(self):
         super(DQN, self).__init__()
         self.conv1 = nn.Conv2d(4, 32, kernel_size=8, stride=4)

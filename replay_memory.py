@@ -24,4 +24,8 @@ class ReplayMemory(object):
         self.position = (self.position + 1) % self.capacity
 
     def sample(self):
+        """
+        Samples batch of experiences, BATCH_SIZE specified in config.py
+        :return: minibatch of experiences
+        """
         return random.sample(self.memory, BATCH_SIZE)
